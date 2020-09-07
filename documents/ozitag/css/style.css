@@ -134,8 +134,8 @@ footer a:hover {
         display: flex;
         align-items: center;
         position: absolute;
-        width: 26px;
-        height: 26px;
+        width: 50px;
+        height: 50px;
         top: 20px;
         right: 20px;
         cursor: pointer;
@@ -147,33 +147,33 @@ footer a:hover {
         display: block;
         position: absolute;
         width: 100%;
-        height: 2px;
+        height: 5px;
         background: #616161;
         transition-duration: .25s;
     }
     .burger-btn > span::before {
         content: '';
-        top: -8px;
+        top: -16px;
     }
     .burger-btn > span::after {
         content: '';
-        top: 8px;
+        top: 16px;
     }
     .drop-btn-toggle:checked ~ .drop-btn-arrow > span {transform: rotate(225deg);}
     .drop-btn-arrow {
         position: absolute;
         float: right;
         top: 0;
-        padding: 20px;
+        padding: 23px;
         right: 16px;
         align-items: center;
         cursor: pointer;
     }
     .drop-btn-arrow > span {
         display: block;
-        padding: 5px;
+        padding: 7px;
         border: solid #616161;
-        border-width: 0 3px 3px 0;
+        border-width: 0 4px 4px 0;
         transition-duration: .25s;
         transform: rotate(45deg);
     }
@@ -186,7 +186,7 @@ footer a:hover {
         box-shadow: 0 0 30px rgba(0,0,0,.2);
     }
     .navbar-space {
-        height: 70px;
+        height: 100px;
         background: #fff;
     }
     .drop-down {
@@ -197,7 +197,7 @@ footer a:hover {
         opacity: 0;
         width: 100%;
         padding: 16px 0;
-        top: 70px;
+        top: 100px;
         font-size: 18px;
         background: #f9f9f9;
         box-shadow: inset 0 0 10px rgba(0,0,0,.1);
@@ -257,6 +257,7 @@ footer a:hover {
         float: none;
         color: black;
         padding: 16px;
+        font-size: 26px;
         text-decoration: none;
         display: block;
         text-align: left;
