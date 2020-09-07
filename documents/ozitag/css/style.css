@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+* {box-sizing: border-box;}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+article {
+    width: 80%;
+    margin: 60px auto 80px;
+}
+footer {
+    padding: 26px 0;
+    color: #ddd;
+    text-align: center;
+    background: #333;
+}
+footer a {
+    color: #ddd;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 2px solid #444;
+}
+footer a:hover {
+    border-bottom: 2px solid #ddd;
+    transition: .3s;
+}
+.navbar a {
+    margin: 0 16px;
+    padding: 26px 0;
+    float: left;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+}
+.back-drop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: rgba(0,0,0,0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.navbar:hover + .back-drop {
+    opacity: 1;
+    left: 0;
+}
+.column a:hover {background: #ddd;}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#burger-toggle {
+    display: none;
+    opacity: 0;
+}
+.drop-btn-toggle {
+    display: none;
+    opacity: 0;
+}
+/* desktop */
+@media screen and (min-width: 1101px) {
+    .navbar {
+        z-index: 2;
+        position: relative;
+        margin: 0 auto;
+        padding: 0 10%;
+        font-size: 20px;
+        background: #fff;
+        box-shadow: 0 0 30px rgba(0,0,0,.2);
+    }
+    .drop-down {overflow: hidden;}
+    .drop-down-content {
+        z-index: 1;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        width: 80%;
+        top: 76px;
+        left: 10%;
+        font-size: 15px;
+        background: #f9f9f9;
+        box-shadow: inset 0 0 10px rgba(0,0,0,.1);
+        transform: translate(0, -20px);
+        transition: .3s;
+    }
+    .drop-down > .drop-btn:hover .drop-down-content {
+        visibility: visible;
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    .drop-down > .drop-btn > a:hover {
+        padding-bottom: 22px;
+        border-bottom: 4px solid #ffdd00;
+    }
+    .drop-down-content h3 {margin: 0;}
+    .row {margin: 0 16px;}
+    .column {
+        float: left;
+        width: 16.666%;
+        padding: 10px;
+    }
+    .column a {
+        float: none;
+        color: black;
+        margin: 0;
+        padding: 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    /* @media screen and (max-width: 1300px) {
+        .column {
+            width: 100%;
+            height: auto;
+        }
+    } */
+}
+/* mobile */
+@media screen and (max-width: 1100px) {
+    #burger-toggle:checked ~ .burger-btn > span {transform: rotate(45deg);}
+    #burger-toggle:checked ~ .burger-btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+    #burger-toggle:checked ~ .burger-btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    .burger-btn {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .burger-btn > span,
+    .burger-btn > span::before,
+    .burger-btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #616161;
+        transition-duration: .25s;
+    }
+    .burger-btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    .burger-btn > span::after {
+        content: '';
+        top: 8px;
+    }
+    .drop-btn-toggle:checked ~ .drop-btn-arrow > span {transform: rotate(225deg);}
+    .drop-btn-arrow {
+        position: absolute;
+        float: right;
+        top: 0;
+        padding: 20px;
+        right: 16px;
+        align-items: center;
+        cursor: pointer;
+    }
+    .drop-btn-arrow > span {
+        display: block;
+        padding: 5px;
+        border: solid #616161;
+        border-width: 0 3px 3px 0;
+        transition-duration: .25s;
+        transform: rotate(45deg);
+    }
+    .navbar {
+        z-index: 3;
+        position: relative;
+        margin: 0 auto;
+        font-size: 20px;
+        background: #fff;
+        box-shadow: 0 0 30px rgba(0,0,0,.2);
+    }
+    .navbar-space {
+        height: 70px;
+        background: #fff;
+    }
+    .drop-down {
+        z-index: 2;
+        display: block;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        width: 100%;
+        padding: 16px 0;
+        top: 70px;
+        font-size: 18px;
+        background: #f9f9f9;
+        box-shadow: inset 0 0 10px rgba(0,0,0,.1);
+        transform: translate(0, -20px);
+        transition: .3s;
+    }
+    #burger-toggle:checked ~ .drop-down {
+        visibility: visible;
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    .drop-down-content {
+        z-index: 1;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        width: 100%;
+        font-size: 16px;
+        background: #f9f9f9;
+        transform: translate(0, -20px);
+        transition: .3s;
+    }
+    .drop-btn-toggle:checked ~ .drop-down-content {
+        position: relative;
+        visibility: visible;
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    .column {
+        position: relative;
+        float: left;
+        width: 100%;
+    }
+    .column-content {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        transform: translate(0, -20px);
+        transition: .3s;
+    }
+    .column-btn-toggle:checked ~ .column-content {
+        position: relative;
+        visibility: visible;
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    .drop-btn {position: relative;}
+    .drop-btn a {text-align: left;}
+    .drop-down-content h3 {
+        font-size: 16px;
+        font-weight: normal;
+        margin: 0;
+    }
+    .drop-down-content a {margin-left: 32px;}
+    .column-content a {margin-left: 48px;}
+    .drop-down a {
+        float: none;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    .drop-down a:hover {background: #ddd;}
+}
