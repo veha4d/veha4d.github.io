@@ -1,0 +1,28 @@
+Uri: https://blacklist2020.netlify.app/
+File Name: D:\Documents\Sites\others\blacklist2020\blacklist2020.netlify.app\index.htm
+Content Type: text/html
+
+Uri: https://blacklist2020.netlify.app/icon.00ecf88a.svg
+File Name: D:\Documents\Sites\others\blacklist2020\blacklist2020.netlify.app\icon.00ecf88a.svg
+Content Type: image/svg+xml
+
+Uri: https://blacklist2020.netlify.app/manifest.webmanifest
+File Name: D:\Documents\Sites\others\blacklist2020\blacklist2020.netlify.app\manifest.bin
+Content Type: application/octet-stream
+
+Uri: https://blacklist2020.netlify.app/styles.451ebaf6.css
+File Name: D:\Documents\Sites\others\blacklist2020\blacklist2020.netlify.app\styles.451ebaf6.css
+Content Type: text/css
+
+Uri: https://blacklist2020.netlify.app/apple-icon-57x57-dunplab-manifest-14805.27fd48e1.png
+File Name: D:\Documents\Sites\others\blacklist2020\blacklist2020.netlify.app\apple-icon-57x57-dunplab-manifest-14805.27fd48e1.png
+Content Type: image/png
+
+Uri: https://blacklist2020.netlify.app/apple-icon-152x152-dunplab-manifest-14805.79ae388c.png
+File Name: D:\Documents\Sites\others\blacklist2020\blacklist2020.netlify.app\apple-icon-152x152-dunplab-manifest-14805.79ae388c.png
+Content Type: image/png
+
+Uri: https://blacklist2020.netlify.app/prod.ca40cea3.js
+File Name: D:\Documents\Sites\others\blacklist2020\blacklist2020.netlify.app\prod.ca40cea3.js
+Content Type: application/javascript
+
