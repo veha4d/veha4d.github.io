@@ -4,7 +4,8 @@ label, a {
 
 #desktop-1:checked ~ #slider-1,
 #desktop-2:checked ~ #slider-2,
-#desktop-3:checked ~ #slider-3 {
+#desktop-3:checked ~ #slider-3,
+#desktop-4:checked ~ #slider-4 {
 	max-width: 960px;
 }
 
@@ -16,7 +17,10 @@ label, a {
 #switch-2-3:checked ~ #controls-2 label:nth-child(2),
 #switch-3-1:checked ~ #controls-3 label:nth-child(3), 
 #switch-3-2:checked ~ #controls-3 label:nth-child(1),
-#switch-3-3:checked ~ #controls-3 label:nth-child(2) {
+#switch-3-3:checked ~ #controls-3 label:nth-child(2),
+#switch-4-1:checked ~ #controls-4 label:nth-child(3), 
+#switch-4-2:checked ~ #controls-4 label:nth-child(1),
+#switch-4-3:checked ~ #controls-4 label:nth-child(2) {
 	background: url('../images/prev.png') no-repeat;
 	background-size: 100%;
 	float: left;
@@ -34,7 +38,10 @@ label, a {
 #switch-2-3:checked ~ #controls-2 label:nth-child(1),
 #switch-3-1:checked ~ #controls-3 label:nth-child(2), 
 #switch-3-2:checked ~ #controls-3 label:nth-child(3),
-#switch-3-3:checked ~ #controls-3 label:nth-child(1) {
+#switch-3-3:checked ~ #controls-3 label:nth-child(1),
+#switch-4-1:checked ~ #controls-4 label:nth-child(2), 
+#switch-4-2:checked ~ #controls-4 label:nth-child(3),
+#switch-4-3:checked ~ #controls-4 label:nth-child(1) {
 	background: url('../images/next.png') no-repeat;
 	background-size: 100%;
 	float: right;
@@ -46,19 +53,22 @@ label, a {
 
 #switch-1-1:checked ~ #slides-1 .image,
 #switch-2-1:checked ~ #slides-2 .image,
-#switch-3-1:checked ~ #slides-3 .image {
+#switch-3-1:checked ~ #slides-3 .image,
+#switch-4-1:checked ~ #slides-4 .image {
 	margin-left: 0;
 }
 
 #switch-1-2:checked ~ #slides-1 .image,
 #switch-2-2:checked ~ #slides-2 .image,
-#switch-3-2:checked ~ #slides-3 .image {
+#switch-3-2:checked ~ #slides-3 .image,
+#switch-4-2:checked ~ #slides-4 .image {
 	margin-left: -100%;
 }
 
 #switch-1-3:checked ~ #slides-1 .image,
 #switch-2-3:checked ~ #slides-2 .image,
-#switch-3-3:checked ~ #slides-3 .image {
+#switch-3-3:checked ~ #slides-3 .image,
+#switch-4-3:checked ~ #slides-4 .image {
 	margin-left: -200%;
 }
 
@@ -70,9 +80,12 @@ label, a {
 #switch-2-3:checked ~ #switch-active-2 label:nth-child(3),
 #switch-3-1:checked ~ #switch-active-3 label:nth-child(1),
 #switch-3-2:checked ~ #switch-active-3 label:nth-child(2),
-#switch-3-3:checked ~ #switch-active-3 label:nth-child(3) {
-	background: #2DC0A6;
-	border-color: #2DC0A6 !important;
+#switch-3-3:checked ~ #switch-active-3 label:nth-child(3),
+#switch-4-1:checked ~ #switch-active-4 label:nth-child(1),
+#switch-4-2:checked ~ #switch-active-4 label:nth-child(2),
+#switch-4-3:checked ~ #switch-active-4 label:nth-child(3) {
+	background: #FF8C00;
+	border-color: #FF8C00 !important;
 }
 
 .slider {
