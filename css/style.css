@@ -130,7 +130,7 @@ hr {
 	font-family: 'RobotoLight', sans-serif;
 }
 
-#header {
+#menu {
 	margin: 0 auto;
 }
 
@@ -464,19 +464,6 @@ hr {
 	margin-top: 10px;
 }
 
-/* .gradient p {
-	overflow: hidden;
-	margin-top: -100px;
-}
-
-.gradient p:before {
-	content: "";
-	display: block;
-	height: 100px;
-	position: relative;
-	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff 100%);
-} */
-
 .comment {
 	padding: 10px 15px;
 	border-left: 4px solid #D0D0D0;
@@ -609,10 +596,6 @@ hr {
 		width: 100%;
 	}
 
-	/* .gradient p:before {
-		top: 115px;
-	} */
-
 	.more a {
 		font-size: 16px;
 	}
@@ -740,10 +723,6 @@ hr {
 	.article {
 		width: 65%;
 	}
-
-	/* .gradient p:before {
-		top: 105px;
-	} */
 
 	.sn {
 		width: 32px;
