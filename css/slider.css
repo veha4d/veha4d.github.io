@@ -21,7 +21,7 @@ label, a {
 #switch-4-1:checked ~ #controls-4 label:nth-child(3), 
 #switch-4-2:checked ~ #controls-4 label:nth-child(1),
 #switch-4-3:checked ~ #controls-4 label:nth-child(2) {
-	background: url('../images/prev.png') no-repeat;
+	background: url('/images/arrow_prev.png') no-repeat;
 	background-size: 100%;
 	float: left;
 	margin: 0 0 0 7px;
@@ -42,7 +42,7 @@ label, a {
 #switch-4-1:checked ~ #controls-4 label:nth-child(2), 
 #switch-4-2:checked ~ #controls-4 label:nth-child(3),
 #switch-4-3:checked ~ #controls-4 label:nth-child(1) {
-	background: url('../images/next.png') no-repeat;
+	background: url('/images/arrow_next.png') no-repeat;
 	background-size: 100%;
 	float: right;
 	margin: 0 7px 0 0;

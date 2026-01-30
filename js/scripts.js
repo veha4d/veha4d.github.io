@@ -17,7 +17,7 @@ function setActiveMenuLink() {
 			link.classList.add('active');
 		}
 
-		if (path.includes('/articles/') && href === 'articles.html') {
+		if (path.includes('/articles/') && href === '/articles.html') {
 			link.classList.add('active');
 		}
 	});
@@ -31,3 +31,36 @@ async function loadPart(id, file, callback) {
 
 loadPart('header', '/header.html', setActiveMenuLink);
 loadPart('footer', '/footer.html');
+
+document.addEventListener('DOMContentLoaded', () => {
+	const tags = document.querySelectorAll('#tags a');
+	const articles = document.querySelectorAll('article.article');
+
+	function applyFilter(filter) {
+		articles.forEach(article => {
+			const categories = article.dataset.category.toLowerCase().split(',');
+			if (filter === 'all' || categories.includes(filter)) {
+				article.classList.remove('hidden');
+			} else {
+				article.classList.add('hidden');
+			}
+		});
+
+		tags.forEach(t => t.classList.remove('active'));
+		const activeTag = document.querySelector(`#tags a[data-filter="${filter}"]`);
+		if (activeTag) activeTag.classList.add('active');
+	}
+
+	const params = new URLSearchParams(window.location.search);
+	const filterFromURL = params.get('filter') ? params.get('filter').toLowerCase() : 'all';
+
+	applyFilter(filterFromURL);
+
+	tags.forEach(tag => {
+		tag.addEventListener('click', e => {
+			e.preventDefault();
+			const filter = tag.dataset.filter.toLowerCase();
+			applyFilter(filter);
+		});
+	});
+});

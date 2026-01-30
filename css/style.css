@@ -93,6 +93,7 @@ hr {
 
 #logo img:hover {
 	background-color: #FF8C00;
+	transform: scale(1.05);
 }
 
 #logo img, #photo img, #nav a, .sn, .nav-inline a:hover, a, #bars-close, .comment {
@@ -132,10 +133,6 @@ hr {
 
 #menu {
 	margin: 0 auto;
-}
-
-#photo img:hover {
-	background-color: #FF8C00;
 }
 
 #skills h4 {
@@ -325,7 +322,7 @@ hr {
 
 #about {
 	padding: 60px 20px 20px;
-	background: url(../images/bg-about.jpg) repeat-x;
+	background: url(/images/background.jpg) repeat-x;
 	background-position: 50% 0%;
 	-webkit-border-radius: 4px 4px 0 0;
 	-moz-border-radius: 4px 4px 0 0;
@@ -354,6 +351,11 @@ hr {
 	-o-border-radius: 100px;
 	border-radius: 100px;
 	background-color: #F6F6F6;
+}
+
+#photo img:hover {
+	background-color: #FF8C00;
+	transform: scale(1.05);
 }
 
 .font-light {
@@ -431,12 +433,17 @@ hr {
 }
 
 .article {
+	display: block;
 	margin: 0 auto 30px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	-o-border-radius: 4px;
 	border-radius: 4px;
 	background-color: #FFFFFF;
+}
+
+.article.hidden {
+	display: none;
 }
 
 .article-img {
