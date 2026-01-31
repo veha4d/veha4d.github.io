@@ -310,6 +310,7 @@ hr {
 	border: none;
 }
 
+/* TODO */
 #sidebar a:hover {
 	color: #FFFFFF;
 }
@@ -583,6 +584,7 @@ hr {
 	}
 
 	#nav-inline-mobile .active, #nav-inline-mobile a:hover {
+		color: #FFFFFF;
 		border-left: 4px solid #FF8C00;
 	}
 
