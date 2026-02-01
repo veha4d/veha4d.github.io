@@ -29,7 +29,12 @@ async function loadPart(id, file, callback) {
 	if (callback) callback();
 }
 
-loadPart('header', '/header.html', setActiveMenuLink);
+function afterHeaderLoad() {
+	setActiveMenuLink();
+	window.scrollTo(0, 0);
+}
+
+loadPart('header', '/header.html', afterHeaderLoad);
 loadPart('footer', '/footer.html');
 
 document.addEventListener('DOMContentLoaded', () => {
