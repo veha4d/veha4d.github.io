@@ -24,9 +24,18 @@ function setActiveMenuLink() {
 }
 
 async function loadPart(id, file, callback) {
-	const res = await fetch(file);
-	document.getElementById(id).innerHTML = await res.text();
-	if (callback) callback();
+	try {
+		const res = await fetch(file);
+		if (!res.ok) throw new Error(`Status: ${res.status}`);
+		
+		const container = document.getElementById(id);
+		if (container) {
+			container.innerHTML = await res.text();
+			if (callback) callback();
+		}
+	} catch (err) {
+		console.error(`Loading error ${file}:`, err);
+	}
 }
 
 function afterHeaderLoad() {
@@ -34,10 +43,16 @@ function afterHeaderLoad() {
 	window.scrollTo(0, 0);
 }
 
-loadPart('header', '/header.html', afterHeaderLoad);
-loadPart('footer', '/footer.html');
-
 document.addEventListener('DOMContentLoaded', () => {
+	loadPart('header', '/header.html', afterHeaderLoad);
+
+	loadPart('footer', '/footer.html', () => {
+		const yearElement = document.getElementById('current-year');
+		if (yearElement) {
+			yearElement.textContent = new Date().getFullYear();
+		}
+	});
+
 	const tags = document.querySelectorAll('#tags a');
 	const articles = document.querySelectorAll('article.article');
 
